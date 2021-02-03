@@ -6,6 +6,24 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+.container img{
+  border-radius: 50px;
+  opacity: 75%;			
+      
+}
+
+@media only screen and (min-width:600px) {
+  .w-100 {
+    display: none;		
+  } 
+  .d-block {
+    display: none;		
+        
+  }     
+  
+}
+
 header
 {
   position: absolute;
@@ -212,6 +230,7 @@ header .logo
 .text a:hover
 {
   letter-spacing: 6px;
+  background-color: rgb(247, 247, 175);
 }
 .social
 {
