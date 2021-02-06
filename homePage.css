@@ -113,6 +113,15 @@
      background-image: url(https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg);
      background-position: center top;
      background-size:cover;
+     font-size: medium;
+     color: #03989E;
+     
+ }
+
+ .myP {
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
  
  .navTrigger {
