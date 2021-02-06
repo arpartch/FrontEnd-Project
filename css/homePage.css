@@ -101,16 +101,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.carousel-caption button{
-    
-}
+
  
  /* Home section */
  
  .home {
      width: 100%;
      height: 100vh;
-     background-image: url(https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg);
+     background-image: url('https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg');
      background-position: center top;
      background-size:cover;
  }
