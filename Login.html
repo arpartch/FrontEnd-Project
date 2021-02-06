@@ -12,7 +12,7 @@
   <div id="login-box">
     <div class="left">
       <h1> <strong>Sign up</strong> </h1>
-
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
           <input type="text" id="username" required maxlength="25" placeholder="Username" required/> 
           
           <input type="text" id="email" name="email"  placeholder="Email" required/>
@@ -32,7 +32,7 @@
           </div>
   
            <div class="right">
-          <span class="loginwith">Sign in with<br />social network</span>
+          <span class="loginwith"><strong>Sign in with</strong><br />social network</span>
           
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
