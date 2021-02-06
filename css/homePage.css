@@ -65,10 +65,13 @@
  }
  /* Carousel slide */
  .carousel {
-    height: 250px;
-    width: 80%;
-    position: relative;
+    padding-right: .1em;
+    position: center;
+    padding-bottom: 5%;
+    margin: none;
+
   }
+
   .carousel .switchLeft {
     color: white;
     font-weight: bold;
@@ -80,10 +83,11 @@
     background-color: #03989E;
     font-family: sans-serif;
     top: 0;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     left: 50px;
       }
+
   .carousel .switchRight {
     color: white;
     font-weight: bold;
@@ -101,7 +105,7 @@
   }
   .carouselbox {
     height: 250px;
-    width: auto;
+    width: inherit;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -110,6 +114,7 @@
     display: flex;
     align-items: center;
     margin-top: 20%;
+    margin-right: none;
   }
   .carouselbox img {
     min-width: 147px;
