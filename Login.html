@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login.css">
-   
-
+    <link rel="stylesheet" href="css/login.css">
     <title>Group Project..</title>
 </head>
 <body>
-    
-    <div id="login-box">
-        <div class="left">
-          <h1>Sign up</h1>
-          
-          <input type="text" id="username" name="username"  placeholder="Username" /> 
-          <input type="text" id="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="E-mail" />
+  <div id="login-box">
+    <div class="left">
+      <h1> <strong>Sign up</strong> </h1>
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <input type="text" id="username" required maxlength="25" placeholder="Username" required/> 
+          <input type="text" id="email" name="email"  placeholder="Email" required/>
           <input type="password" id="password" name="password"  placeholder="Password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-          <input type="password" id="password2" name="password2" placeholder="Retype password" />
-          
+          <input type="password" id="password2" name="password2" placeholder="Retype password" required/>
           <input type="submit" name="signup_submit" value="Sign me up" />
         </div>
-
         <div id="message">
             <h3>Password must contain the following:</h3>
             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
@@ -29,21 +24,100 @@
             <p id="number" class="invalid">A <b>number</b></p>
             <p id="length" class="invalid">Minimum <b>8 characters</b></p>
           </div>
-        
-        
-        <div class="right">
-          <span class="loginwith">Sign in with<br />social network</span>
-          
+           <div class="right">
+          <span class="loginwith"><strong>Sign in with</strong><br />social network</span>
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
           <button class="social-signin google">Log in with Google+</button>
         </div>
         <div class="or">OR</div>
       </div>
-   
-      
-<script src="./scripts/login.js" type="text/javascript"></script>
+    </head>
+<script src="scripts/login.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+ <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+  <!-- Previously loaded Firebase SDKs -->
+  <script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+    var firebaseConfig = {
+      // ...
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCC0CnNUlBNos7u481fpnZAp6iVAmawJcA",
+    authDomain: "movie-app-d0228.firebaseapp.com",
+    projectId: "movie-app-d0228",
+    storageBucket: "movie-app-d0228.appspot.com",
+    messagingSenderId: "109022431696",
+    appId: "1:109022431696:web:2a9aa47451d15ac11bd1d5",
+    measurementId: "G-KY9SZBCR08"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="scripts/login.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+ <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+  <!-- Previously loaded Firebase SDKs -->
+  <script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+    var firebaseConfig = {
+      // ...
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCC0CnNUlBNos7u481fpnZAp6iVAmawJcA",
+    authDomain: "movie-app-d0228.firebaseapp.com",
+    projectId: "movie-app-d0228",
+    storageBucket: "movie-app-d0228.appspot.com",
+    messagingSenderId: "109022431696",
+    appId: "1:109022431696:web:2a9aa47451d15ac11bd1d5",
+    measurementId: "G-KY9SZBCR08"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script> 
+</body>
 </body>
 </html>
+ 
