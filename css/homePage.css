@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
  html,
+ 
+
  body {
      margin: 0;
      padding: 0;
@@ -7,6 +9,8 @@
      font-family: "Quicksand", sans-serif;
      font-size: 62.5%;
      font-size: 10px;
+     background-color: #262626;
+     scroll-behavior: smooth;
  }
  /*-- Inspiration taken from abdo steif -->
  /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -72,38 +76,78 @@
 
  
  /* Carousel slide */
+ .carousel {
+    height: 250px;
+    width: 80%;
+    position: relative;
+  }
 
- .carousel-item{
-     height: 100vh;
-     min-height: 300px;
-     background: no-repeat center center scroll;
-     background-size: cover;
- }
+  .carousel .switchLeft {
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 45px;
+    line-height: 250px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #03989E;
+    font-family: sans-serif;
+    top: 0;
+    z-index: 3;
+    position: absolute;
+    left: 50px;
+      }
 
-.carousel-caption{
-    bottom: 220px;
-}
-
-.carousel-caption h5{
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
-    font-family: 'Big Shoulders Display', cursive;
-    color: #03989E;
-}
-
-.carousel-caption p{
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 2;
-    font-family: 'Poppins', sans-serif;
-}
-
-.carousel-caption button{
-    
-}
+  .carousel .switchRight {
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 45px;
+    line-height: 250px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #03989E;
+    font-family: sans-serif;
+    top: 0;
+    z-index: 3;
+    position: absolute;
+    right: -50px;
+  }
+  
+  
+  .carouselbox {
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+    margin-top: 20%;
+  }
+  
+  .carouselbox img {
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    background-color: #03989E;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+  
+    /* margin: 15px; */
+  }
+  
+  .carouselbox img:hover {
+    transform: scale(1.4);
+    z-index: 5;
+  }
+  
+ 
  
  /* Home section */
  
@@ -113,6 +157,15 @@
      background-image: url(https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg);
      background-position: center top;
      background-size:cover;
+     font-size: medium;
+     color: #03989E;
+     
+ }
+
+ .myP {
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
  
  .navTrigger {
@@ -378,6 +431,7 @@
  .myH2 {
      text-align:center;
      font-size: 4rem;
+     margin-top: 200px;
  }
  .myP {
      text-align: justify;
