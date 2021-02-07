@@ -58,6 +58,8 @@ const imageURL = 'https://image.tmdb.org/t/p/w500'  //API URL endpoint to produc
 const userInput = document.getElementById('inputValue');
 const searchButton = document.getElementById('search');
 const moviesContainer = document.getElementById('movies-container')
+const clearButton = document.getElementById('clearButton')
+
 //THIS FUNCTION CREATED THE IMAGE TAG THAT HOLDS THE POSTERS
 function movieSelection(movies) {  //this function is created to return the movie poster(image) from the the movies array that you will get from the data you retrieve from the api 
     return movies.map((movie) => { //here you will loop through each object using map() in the array and run the code inside for each object  * an objects inside the array is where the movie info is located, each movie is insde its own object
@@ -66,14 +68,20 @@ function movieSelection(movies) {  //this function is created to return the movi
         }       
     })
 }
+
+
 //THIS FUNCTION CREATS THE DIV THAT WILL CONTIAIN THE IMAGE TAGS
 function createMoviesContainers(movies) {
     const movieElement = document.createElement('div');
     movieElement.setAttribute('class', 'movie');
     const movieTemplate =`
+    <button type="button" id="clearButton" onclick = "moviesContainer.innerHTML = ' ' " >Clear</button>
     <section class="section">
+      
         ${movieSelection(movies)}
+      
     </section>
+   
     `;
     movieElement.innerHTML = movieTemplate
     return movieElement
@@ -88,8 +96,43 @@ searchButton.onclick = function(event){
     .then( (res) => res.json())
     .then((data) => {
         const movies = data.results;
+        moviesContainer.innerHTML = ' ';
         const movieBlock = createMoviesContainers(movies)
         moviesContainer.appendChild(movieBlock)
     })
+    .catch((error) => {
+      console.log('Error:' + error)
+    })
     userInput.value = ' ';
 }
+//////////creating modal that will populate with movie information///////////////
+
+
+
+
+
+document.addEventListener('click', (event)=> { //added click event 
+  const target = event.target; //setting a variable equal to the events target  *the element that has the eventlistener attached to it
+
+  if(target.tagName.toLowerCase() === 'img') { //this check all the elements that has a click event listenr and will only run code it it happened on an img tag
+      console.log(event)
+      
+      let movieId = target.dataset.movieId; //created variable to hold the Movie Id
+      console.log(target)
+      console.log(target.dataset)
+      console.log('MovieID:' + movieId) //log movie //
+      const trailerPath = `/movie/${movieId}videos`
+      const movieTrailerUrl = `https://api.themoviedb.org/3${trailerPath}?api_key=fa3461b8cffc66e41e8c13ba8acce38c`;
+      
+      fetch(movieTrailerUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+       
+
+        
+
+        
+      })
+
+  }})
