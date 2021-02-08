@@ -435,8 +435,7 @@
  .footer-basic {
     padding:40px 0;
     background-color:#03989e;
-    opacity: 70%;
-    color:#4b4c4d;
+    color: white;
   }
   
   .footer-basic ul {
@@ -481,15 +480,13 @@
     opacity:0.75;
   }
   
-  .footer-basic .social > a:hover {
-    opacity:0.9;
-  }
+  
   
   .footer-basic .copyright {
     margin-top:15px;
     text-align:center;
     font-size:13px;
-    color:#aaa;
+    color:white;
     margin-bottom:0;
   }
   
