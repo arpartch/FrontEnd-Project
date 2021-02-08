@@ -93,3 +93,13 @@ searchButton.onclick = function(event){
     })
     userInput.value = ' ';
 }
+// Review Search , connected js to html always be document.getelementbyid,class etc//
+const movieReviewButton = document.getElementById(reviewbutton)
+//created an event //
+movieReviewButton.onclick=function(event){
+  event.preventDefault();
+  const movieReviewInput = document.getElementById(movieReviewInput)
+  const value = movieReviewInput.value
+  console.log(value)
+}
+
