@@ -60,12 +60,22 @@ const searchButton = document.getElementById('search');
 const moviesContainer = document.getElementById('movies-container')
 const clearButton = document.getElementById('clearButton')
 
+////////////////////////////
+
+  
+
+
+
+//////////
+
 //THIS FUNCTION CREATED THE IMAGE TAG THAT HOLDS THE POSTERS
 function movieSelection(movies) {  //this function is created to return the movie poster(image) from the the movies array that you will get from the data you retrieve from the api 
     return movies.map((movie) => { //here you will loop through each object using map() in the array and run the code inside for each object  * an objects inside the array is where the movie info is located, each movie is insde its own object
         if(movie.poster_path) { //this checks to make sure only to create an img tag if the movie.poster_path is true.  so if there is no image then dont create the img tag
-            return `<img src=${imageURL + movie.poster_path} data-movie-id=${movie.id}/>`;  // here you are creating an img tag and inserting the imageURL and adding the poster path to it, and also adding movie id from the object you are looping through *each object gets and img tag created for them
-        }       
+            return `
+            <img  id="myImg" src=${imageURL + movie.poster_path} data-movie-id=${movie.id} style="width:100%;max-width:300px"/>`;  // here you are creating an img tag and inserting the imageURL and adding the poster path to it, and also adding movie id from the object you are looping through *each object gets and img tag created for them
+            
+          }       
     })
 }
 
@@ -79,8 +89,13 @@ function createMoviesContainers(movies) {
     <section class="section">
       
         ${movieSelection(movies)}
+        
       
     </section>
+    <div class="content" style="display: none" >
+    
+            <p id="content-close">${movies}</p>
+    </div>
    
     `;
     movieElement.innerHTML = movieTemplate
@@ -107,7 +122,9 @@ searchButton.onclick = function(event){
 }
 //////////creating modal that will populate with movie information///////////////
 
+function clearInfoBox(){
 
+}
 
 
 
@@ -121,18 +138,58 @@ document.addEventListener('click', (event)=> { //added click event
       console.log(target)
       console.log(target.dataset)
       console.log('MovieID:' + movieId) //log movie //
-      const trailerPath = `/movie/${movieId}videos`
-      const movieTrailerUrl = `https://api.themoviedb.org/3${trailerPath}?api_key=fa3461b8cffc66e41e8c13ba8acce38c`;
+
+      const section = event.target.parentElement; //equal to the Section Tag, the event target is the img tag and the img tag is nest in the section container so it is considered the parentelement of the img tag
+      const content = section.nextElementSibling; // equal to the content div right under the section tag. since they are both nested in the same div , on the same level they are considered siblings
+     
       
-      fetch(movieTrailerUrl)
+      fetch(`https://api.themoviedb.org/3/movie/${movieId}videos?api_key=fa3461b8cffc66e41e8c13ba8acce38c`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-       
-
         
-
-        
+        const template = `
+        <button type="button" id="movieClearButton" onclick = "moviesContainer.innerHTML = ' ' " >Clear</button>
+        <h4>${data.original_title}</h4>
+        <p><strong>Release Date:</strong> ${data.release_date}</p>
+        <p><strong>Rating:</strong> ${data.vote_average}</p> 
+        <p><strong>Description:</strong> ${data.overview}</p>
+        `;
+        content.style.display = "block";
+        content.innerHTML = template
       })
-
+      
+     
+      
   }})
+
+ 
+
+  /*
+  adult: false
+backdrop_path: "/kU7ZiyeUwcpTkYj3UcxSqGdZmxY.jpg"
+belongs_to_collection: null
+budget: 0
+genres: (2) [{…}, {…}]
+homepage: ""
+id: 618353
+imdb_id: "tt12794046"
+original_language: "en"
+original_title: "Batman: Death in the Family"
+overview: "Tragedy strikes the Batman's life again when Robin Jason Todd tracks down his birth mother only to run afoul of the Joker. An adaptation of the 1988 comic book storyline of the same name."
+popularity: 219.428
+poster_path: "/k8Q9ulyRE8fkvZMkAM9LPYMKctb.jpg"
+production_companies: (2) [{…}, {…}]
+production_countries: [{…}]
+release_date: "2020-10-13"
+revenue: 0
+runtime: 96
+spoken_languages: [{…}]
+status: "Released"
+tagline: "The fate of Gotham is in your hands."
+title: "Batman: Death in the Family"
+video: false
+vote_average: 7.4
+vote_count: 168
+__proto__: Object
+*/

@@ -176,6 +176,15 @@
     margin-bottom: 10px;
     border-radius: 20px;
 }
+#movieClearButton{
+    margin-top: 10px;
+    font-size: 15px;
+    color: whitesmoke;
+    background-color: rgb(243, 59, 59);
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
 
 .search-button-container {
     margin-top: 35px
@@ -235,6 +244,22 @@ img:hover {       /* adds animation to img when hovered over */
 }
 
 /****modal*****/
+.content {
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v462-n-130-textureidea_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9465282a2b0a375f4f5b120d7bbad882');
+    border: 2px solid rgb(5, 5, 5);
+   
+    color: white;
+    
+}
+.content h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+.content p {
+    margin-left: 10px;
+    font-size: 20px;
+}
 
 /****************************************************************************************************/
  /* Media qurey section */
