@@ -5,7 +5,7 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
 });
-const sliders = document.querySelector(".carouselbox");
+const sliders = document.querySelector(".carouselbox, .carouselbox1, .carouselbox2");
 var scrollPerClick;
 var ImagePadding = 20;
 showMoviesData();
