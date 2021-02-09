@@ -64,15 +64,19 @@
      color: #03989E;
  }
  /* Carousel slide */
+h1 {
+    color: white;
+}
+
  .carousel {
-    height: 250px;
-    width: 80%;
-    position: relative;
+    padding-right: 2%;
+    position: center;
+    padding-bottom: 5%;
+    margin: 2%;
   }
   .carousel .switchLeft {
     color: white;
     font-weight: bold;
-    height: 100%;
     width: 45px;
     line-height: 250px;
     font-size: 25px;
@@ -87,7 +91,6 @@
   .carousel .switchRight {
     color: white;
     font-weight: bold;
-    height: 100%;
     width: 45px;
     line-height: 250px;
     font-size: 25px;
@@ -109,7 +112,9 @@
     padding-bottom: 10px !important;
     display: flex;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 5%;
+    margin-right: none;
+    margin-left: 4%;
   }
   .carouselbox img {
     min-width: 147px;
