@@ -5,7 +5,7 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
 });
-const sliders = document.querySelector(".carouselbox");
+const sliders = document.querySelector(".carouselbox1");
 var scrollPerClick;
 var ImagePadding = 20;
 showMoviesData();
@@ -49,6 +49,9 @@ async function showMoviesData() {
   });
   scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
 }
+
+
+
 /////////////////////////////////////////ERNESTO/////////////////////////////////////////////////
 ///API URL LINKS
 const  apiKey = 'fa3461b8cffc66e41e8c13ba8acce38c';
@@ -79,6 +82,7 @@ function createMoviesContainers(movies) {
     return movieElement
 }
   //Created a on click when search button is clicked on//  this function will populate the images
+
 searchButton.onclick = function(event){
     event.preventDefault();
     const value = userInput.value;

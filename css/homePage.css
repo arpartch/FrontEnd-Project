@@ -63,7 +63,13 @@
  .nav div.main_list ul li a:hover {
      color: #03989E;
  }
+ 
  /* Carousel slide */
+
+ h1 {
+     color: white;
+ }
+
  .carousel {
     padding-right: .1em;
     position: center;
@@ -75,7 +81,6 @@
   .carousel .switchLeft {
     color: white;
     font-weight: bold;
-    height: 100%;
     width: 45px;
     line-height: 250px;
     font-size: 25px;
@@ -83,7 +88,7 @@
     background-color: #03989E;
     font-family: sans-serif;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     left: 50px;
       }
@@ -91,7 +96,6 @@
   .carousel .switchRight {
     color: white;
     font-weight: bold;
-    height: 100%;
     width: 45px;
     line-height: 250px;
     font-size: 25px;
@@ -103,7 +107,7 @@
     position: absolute;
     right: -50px;
   }
-  .carouselbox {
+  .carouselbox1 {
     height: 250px;
     width: inherit;
     overflow: hidden;
@@ -113,10 +117,10 @@
     padding-bottom: 10px !important;
     display: flex;
     align-items: center;
-    margin-top: 20%;
     margin-right: none;
+    margin-left: 3%;
   }
-  .carouselbox img {
+  .carouselbox1 img {
     min-width: 147px;
     max-width: 147px;
     height: 200px;
@@ -128,10 +132,41 @@
     z-index: 2;
     /* margin: 15px; */
   }
-  .carouselbox img:hover {
+  .carouselbox1 img:hover {
     transform: scale(1.4);
     z-index: 5;
   }
+
+  .carouselbox2 {
+    height: 250px;
+    width: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+    margin-right: none;
+    margin-left: 3%;
+  }
+  .carouselbox2 img {
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    background-color: #03989E;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+    /* margin: 15px; */
+  }
+  .carouselbox2 img:hover {
+    transform: scale(1.4);
+    z-index: 5;
+  }
+
  /* Home section */
  .home {
      width: 100%;
@@ -142,6 +177,11 @@
      font-size: medium;
      color: #03989E;
  }
+
+ .about-container {
+     display: flex;
+ }
+
  .myP {
      display: flex;
      align-items: center;

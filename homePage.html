@@ -23,6 +23,7 @@
                     <li class="nav-item"><a href="#">Popular</a></li>
                     <li class="nav-item"><a href="#">Genre</a></li>
                     <li class="nav-item"><a href="#">Reviews</a></li>
+                    <li class="nav-item"><a class="button" href="./index.html">Logout</a></li>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -37,14 +38,16 @@
 
     <!-- <section class="home"> -->
     </section>
+    <div class="about-container">
     <div class="home" style="height: 1000px">
         <!-- just to make scrolling effect possible -->
-			<h2 class="myH2">Welcome to Our App</h2>
-			<p class="myP">We're here for all you movie choosing needs!</p>
-			<p class="myP">I HOPE YOU FIND THIS USEFULL</p>
+			<h2 class="myH2"><b>Welcome to Our App</b></h2>
+			<p class="myP"><em>We're here for all you movie choosing needs!</em></p>
+			<p class="myP">WE HOPE YOU FIND THIS USEFULL</p>
 				<p class="myP">
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam.
 			</p>
+    </div>
     </div>
 
     <!--SEARCH INPUT / FORM-->
@@ -60,16 +63,38 @@
 
 
    <!-- Carousel Slider Popular-->
-   <section class="carousel">
-   <div class="popular">
-    <div class="carouselbox">
-      <!-- Movie Data will come here  -->
+<section id="popular">
+   <div class="carousel">
+    <div class="carouselbox1">
+      <!-- Random Data will come here  -->
     </div>
+
     <a class="switchLeft sliderButton" onclick="sliderScrollLeft()"><</a>
     <a class="switchRight sliderButton" onclick="sliderScrollRight()">></a>
   </div>
 </section>
 
+<section id="new">
+  <div class="carousel">
+    <div class="carouselbox2">
+      <!-- Random Data will come here  -->
+    </div>
+
+    <a class="switchLeft sliderButton" onclick="sliderScrollLeft()"><</a>
+    <a class="switchRight sliderButton" onclick="sliderScrollRight()">></a>
+  </div>
+</section>
+
+<section id="genre">
+  <div class="carousel">
+    <div class="carouselbox">
+      <!-- Random Data will come here  -->
+    </div>
+
+    <a class="switchLeft sliderButton" onclick="sliderScrollLeft()"><</a>
+    <a class="switchRight sliderButton" onclick="sliderScrollRight()">></a>
+  </div>
+</section>
 <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
