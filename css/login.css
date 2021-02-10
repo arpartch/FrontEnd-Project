@@ -31,7 +31,7 @@ video
   width: 600px;
   height: 400px;
   background-color: #03989e;
-  opacity: 90%;
+  opacity: 70%;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -187,7 +187,7 @@ button.social-signin.twitter {
 button.social-signin.google {
   background: #DD4B39;
 }
-} .footer-basic {
+ .footer-basic {
   padding:40px 0;
   background-color:#03989e;
   color: white;
