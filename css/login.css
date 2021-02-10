@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg);
+  background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v462-n-130-textureidea_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9465282a2b0a375f4f5b120d7bbad882');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,14 +15,68 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
+ /* Navbar section */
+ .nav {
+  width: 100%;
+  height: 65px;
+ 
+  line-height: 65px;
+  text-align: center;
+}
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
+}
+.nav div.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+}
+.nav div.logo a:hover {
+  color: #03989E;
+}
+.nav div.main_list {
+  height: 65px;
+  float: right;
+}
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
+}
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 65px;
+  font-size: 2.4rem;
+}
+.nav div.main_list ul li a:hover {
+  color: #03989E;
+}
+/* Carousel slide */
+h1 {
+ color: white;
+}
 #login-box {
   position: relative;
   margin: 18% auto;
   width: 600px;
   height: 400px;
-  background: rgb(153, 76, 76);
+  background: #03989E;
   opacity: 90%;
-  border-radius: 2px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .left {
@@ -64,7 +118,7 @@ input[type="submit"] {
   margin-top: 28px;
   width: 120px;
   height: 32px;
-  background: #16a085;
+  background: #323233;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -84,6 +138,18 @@ input[type="submit"]:active {
   opacity: 1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
+}
+#submit{
+  font-size: 15px;
+  padding: 5px;
+  border: 3px solid black;
+  background-color: #323233;
+  color: whitesmoke;
+  border-radius: 4px;
+
+}
+#submit:hover {
+  cursor: pointer;
 }
 .or {
   position: absolute;
