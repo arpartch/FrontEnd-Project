@@ -235,11 +235,11 @@ button.social-signin:active {
   transition: 0.2s ease;
 }
 button.social-signin.facebook {
-  background: #32508E;
+  background: white;
 }
 button.social-signin.twitter {
-  background: #55ACEE;
+  background: white;
 }
 button.social-signin.google {
-  background: #DD4B39;
+  background: white;
 }
