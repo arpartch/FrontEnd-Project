@@ -40,7 +40,7 @@ async function showMoviesData() {
   var result = await axios.get(
     "https://api.themoviedb.org/3/discover/movie?api_key=" +
       api_key +
-      "&primary_release_year=2017&sort_by=revenue.desc"
+      "&sort_by=popularity.desc"
   );
   result = result.data.results;
   result.map(function (cur, index) {
