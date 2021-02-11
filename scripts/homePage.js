@@ -6,6 +6,8 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").fadeIn();
 });
 const sliders = document.querySelector(".carouselbox");
+const slider1 = document.querySelector(".carouselbox1");
+const slider2 = document.querySelector(".carouselbox2");
 var scrollPerClick;
 var ImagePadding = 20;
 showMoviesData();
@@ -43,6 +45,14 @@ async function showMoviesData() {
   result = result.data.results;
   result.map(function (cur, index) {
     sliders.insertAdjacentHTML(
+      "beforeend",
+      `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
+    );
+    slider1.insertAdjacentHTML(
+      "beforeend",
+      `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
+    );
+    slider2.insertAdjacentHTML(
       "beforeend",
       `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
     );
