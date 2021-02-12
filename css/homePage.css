@@ -73,8 +73,17 @@ h1 {
     color: white;
 }
 
+.movie-sliders h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 60px;
+    font-style: oblique;
+}
+
  .carousel {
     padding-right: 2%;
+    
     position: center;
     padding-bottom: 5%;
     margin: 2%;
@@ -91,7 +100,8 @@ h1 {
     top: 0;
     z-index: 3;
     position: absolute;
-    left: 50px;
+    left: 30px;
+    
       }
   .carousel .switchRight {
     color: white;
@@ -106,6 +116,7 @@ h1 {
     z-index: 3;
     position: absolute;
     right: -50px;
+    margin-right: 60px;
   }
   .carouselbox {
     height: 250px;
