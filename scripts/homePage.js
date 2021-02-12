@@ -34,6 +34,7 @@ function sliderScrollRight() {
   }
   console.log("Scroll Amount: ", scrollAmount);
 }
+
 // For showing dynamic contents only
 async function showMoviesData() {
   const api_key = "4c78b28d9258298d89b3399f07b31f4e";
