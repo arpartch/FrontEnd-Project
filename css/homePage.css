@@ -394,6 +394,10 @@ img:hover {       /* adds animation to img when hovered over */
     border: 2px solid rgb(5, 5, 5);
    
     color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size: cover;
     
 }
 .content h4 {
