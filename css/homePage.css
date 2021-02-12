@@ -199,6 +199,68 @@ h1 {
     transform: scale(1.4);
     z-index: 5;
   }
+
+  .carouselbox3 {
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: none;
+    margin-left: 4%;
+  }
+  .carouselbox3 img {
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    background-color: #03989E;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+    /* margin: 15px; */
+  }
+  .carouselbox3 img:hover {
+    transform: scale(1.4);
+    z-index: 5;
+  }
+
+  .carouselbox4 {
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: none;
+    margin-left: 4%;
+  }
+  .carouselbox4 img {
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    background-color: #03989E;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+    /* margin: 15px; */
+  }
+  .carouselbox4 img:hover {
+    transform: scale(1.4);
+    z-index: 5;
+  }
  /* Home section */
  .home {
      margin-left: 50px;

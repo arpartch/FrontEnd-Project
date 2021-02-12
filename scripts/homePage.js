@@ -9,11 +9,15 @@ $('.navTrigger').click(function () {
 const sliders = document.querySelector(".carouselbox");
 const sliders1 = document.querySelector(".carouselbox1");
 const sliders2 = document.querySelector(".carouselbox2");
+const sliders3 = document.querySelector(".carouselbox3");
+const sliders4 = document.querySelector(".carouselbox4");
 var scrollPerClick;
 var ImagePadding = 20;
 showMoviesData();
 showMoviesData1();
 showMoviesData2();
+showMoviesData3();
+showMoviesData4();
 // Scroll Functionality
 var scrollAmount = 0;
 function sliderScrollLeft() {
@@ -38,13 +42,16 @@ function sliderScrollRight() {
   console.log("Scroll Amount: ", scrollAmount);
 }
 
+
+
 // For showing dynamic contents only
+// Popular
 async function showMoviesData() {
   const api_key = "4c78b28d9258298d89b3399f07b31f4e";
   var result = await axios.get(
     "https://api.themoviedb.org/3/discover/movie?api_key=" +
       api_key +
-      "&primary_release_year=2017&sort_by=revenue.desc"
+      "&sort_by=popularity.desc"
   );
   result = result.data.results;
   result.map(function (cur, index) {
@@ -52,24 +59,17 @@ async function showMoviesData() {
       "beforeend",
       `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
     );
-    // slider1.insertAdjacentHTML(
-    //   "beforeend",
-    //   `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
-    // );
-    // slider2.insertAdjacentHTML(
-    //   "beforeend",
-    //   `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
-    // );
   });
   scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
 }
 
+// New
 async function showMoviesData1() {
   const api_key = "4c78b28d9258298d89b3399f07b31f4e";
   var result1 = await axios.get(
-    "https://api.themoviedb.org/3/discover/movie?api_key=" +
+    "https://api.themoviedb.org/3/movie/upcoming?api_key=" +
       api_key +
-      "&sort_by=popularity.desc"
+      "&language=en-US&page=1"
   );
   result1 = result1.data.results;
   result1.map(function (cur, index) {
@@ -81,6 +81,7 @@ async function showMoviesData1() {
   scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
 }
 
+// Action
 async function showMoviesData2() {
   const api_key = "4c78b28d9258298d89b3399f07b31f4e";
   var result2 = await axios.get(
@@ -91,6 +92,41 @@ async function showMoviesData2() {
   result2 = result2.data.results;
   result2.map(function (cur, index) {
     sliders2.insertAdjacentHTML(
+      "beforeend",
+      `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
+    );
+  });
+  scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
+}
+
+//Trending
+async function showMoviesData3() {
+  const api_key = "4c78b28d9258298d89b3399f07b31f4e";
+  var result3 = await axios.get(
+    "https://api.themoviedb.org/3/trending/all/day?api_key=" +
+      api_key 
+  );
+  result3 = result3.data.results;
+  result3.map(function (cur, index) {
+    sliders3.insertAdjacentHTML(
+      "beforeend",
+      `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
+    );
+  });
+  scrollPerClick = document.querySelector(".img-1").clientWidth + 20;
+}
+
+//Trending TV
+async function showMoviesData4() {
+  const api_key = "4c78b28d9258298d89b3399f07b31f4e";
+  var result4 = await axios.get(
+    "https://api.themoviedb.org/3/tv/top_rated?api_key=" +
+      api_key +
+      "&language=en-US&page=1"
+  );
+  result4 = result4.data.results;
+  result4.map(function (cur, index) {
+    sliders4.insertAdjacentHTML(
       "beforeend",
       `<img class="img-${index} slider-img" src="http://image.tmdb.org/t/p/w185/${cur.poster_path}" /> `
     );
