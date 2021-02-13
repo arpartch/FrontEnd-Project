@@ -18,8 +18,6 @@ Dee Garner
 Athena Partch
 
 # Preview
-![](./images/demo.png)
-![](./images/demo1.png)
-![](./images/demo1.png)
-![](./images/demo1.png)
+![](./images/movie-app.gif)
+
 
