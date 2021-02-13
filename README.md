@@ -11,10 +11,10 @@ What technologies you used-
 
 The project is based in HTML, CSS, and JS. It is styled with CSS Bootstrap. Additonally it uses The Movie Data Base with both Fetch and Axios. We deployed the project using Netlify. 
 
-Screenshots of your project-
-
 
 List of team members-
 Ernesto Guerrero
 Dee Garner
 Athena Partch
+
+#Preview
