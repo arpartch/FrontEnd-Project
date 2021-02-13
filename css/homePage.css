@@ -302,6 +302,9 @@ h1 {
      transition: all 0.4s ease;
  }
 
+ .movie-sliders{
+  margin-bottom: 70px;
+ }
 
 /*******************************************Search bar styling  *********************************************************/
 .search-container{
@@ -385,7 +388,7 @@ img:hover {       /* adds animation to img when hovered over */
     margin-left:0 40px;
     transform: scale(1.2);
     cursor: pointer;
-    border: 5px solid yel;
+    border: 5px solid yellow;
 }
 
 /****modal*****/
@@ -408,6 +411,29 @@ img:hover {       /* adds animation to img when hovered over */
 .content p {
     margin-left: 10px;
     font-size: 20px;
+}
+
+.trailer{
+    display: flex;
+    width: 100%;
+   
+    overflow: auto;
+    background-color: rgb(66, 65, 65);
+}
+.trailer iframe{
+ margin: 20px;
+ border-radius: 10px;
+ 
+ transition: 250ms all; /* animation spead*/
+ 
+ border-radius: 10px;
+}
+iframe:hover{
+    
+    margin-left:0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+    border: 5px solid rgb(245, 245, 207);
 }
 
 .footer-basic {

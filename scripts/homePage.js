@@ -134,6 +134,7 @@ function slider4ScrollRight() {
     });
   }
   console.log("Scroll Amount: ", scrollAmount);
+  
 }
 
 // For showing dynamic contents only
@@ -179,7 +180,7 @@ async function showMoviesData2() {
   var result2 = await axios.get(
     "https://api.themoviedb.org/3/discover/movie?api_key=" +
       api_key +
-      "&primary_release_year=2017&sort_by=revenue.desc"
+      "&primary_release_year=2020&sort_by=revenue.desc"
   );
   result2 = result2.data.results;
   result2.map(function (cur, index) {
