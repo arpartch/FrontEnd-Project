@@ -18,3 +18,8 @@ List of team members-
 Ernesto Guerrero
 Dee Garner
 Athena Partch
+
+![](./images/demo.png)
+![](./images/demo1.png)
+![](./images/demo1.png)
+![](./images/demo1.png)
