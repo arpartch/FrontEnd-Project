@@ -16,5 +16,5 @@ Screenshots of your project-
 
 List of team members-
 Ernesto Guerrero
-Dee 
+Dee Garner
 Athena Partch
