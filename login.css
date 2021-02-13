@@ -3,6 +3,7 @@
   outline: none;
 }
 body {
+  
   margin: 0;
   padding: 0;
   background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v462-n-130-textureidea_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9465282a2b0a375f4f5b120d7bbad882');
@@ -17,11 +18,12 @@ body {
 }
 
  /* Navbar section */
+
  .nav {
   width: 100%;
   height: 65px;
- 
-  line-height: 65px;
+  position: ;
+  line-height: 40px;
   text-align: center;
 }
 .nav div.logo {
@@ -38,8 +40,8 @@ body {
 .nav div.logo a:hover {
   color: #03989E;
 }
-.nav div.main_list {
-  height: 65px;
+ .nav div.main_list {
+  height: 100;
   float: right;
 }
 .nav div.main_list ul {
@@ -52,23 +54,21 @@ body {
 }
 .nav div.main_list ul li {
   width: auto;
-  height: 65px;
+  height: 30px;
   padding: 0;
   padding-right: 3rem;
 }
 .nav div.main_list ul li a {
   text-decoration: none;
-  color: #fff;
-  line-height: 65px;
-  font-size: 2.4rem;
+  color:  #03989E;
+  line-height: 15px;
+  font-size: 1.4rem;
 }
 .nav div.main_list ul li a:hover {
-  color: #03989E;
+  color: white;
 }
-/* Carousel slide */
-h1 {
- color: white;
-}
+
+
 #login-box {
   position: relative;
   margin: 18% auto;
@@ -243,3 +243,65 @@ button.social-signin.twitter {
 button.social-signin.google {
   background: white;
 }
+
+.content h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.content p {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.footer-basic {
+  padding:10px 10;
+  background-color:#03989e;
+  color: white;
+}
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+.footer-basic li {
+  padding:0 10px;
+}
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+.footer-basic ul a:hover {
+  opacity:1;
+}
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:white;
+  margin-bottom:0;
+}
+
+
+  
