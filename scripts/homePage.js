@@ -337,7 +337,7 @@ document.addEventListener('click', (event)=> { //added click event
         <p><strong>Tag:</strong> ${data.tagline}</p>
         <p><strong>Description:</strong> ${data.overview}</p>
        
-        <p><strong>Description:</strong> ${data.id}</p>
+       
         
 
 
