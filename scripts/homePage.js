@@ -241,7 +241,6 @@ const clearButton = document.getElementById('clearButton')
 
 ////////////////////////////
 
-  
 
 
 
@@ -332,7 +331,16 @@ document.addEventListener('click', (event)=> { //added click event
         <h4>${data.original_title}</h4>
         <p><strong>Release Date:</strong> ${data.release_date}</p>
         <p><strong>Rating:</strong> ${data.vote_average}</p> 
+        <p><strong>Budget:</strong> ${data.budget}</p>
+        <p><strong>Revenue:</strong> ${data.revenue}</p>
+        <p><strong>Length:</strong> ${data.runtime} min</p>
+        <p><strong>Tag:</strong> ${data.tagline}</p>
         <p><strong>Description:</strong> ${data.overview}</p>
+       
+        <p><strong>Description:</strong> ${data.id}</p>
+        
+
+
         `;
         content.style.display = "block";
         content.innerHTML = template
