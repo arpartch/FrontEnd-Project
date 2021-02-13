@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+.video-background {
+  background: white;
+  position: relative;
+  top: 20; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: relative;
+  top: 20;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  pointer-events: none;
+}
+#vidtop-content {
+ padding:10px 10;
+ color: black;
+}
+
+.vid-info { top: 0; right: 0; width: ; background: rgba(0,0,0,0.3); color:#fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 10; line-height: 1.2; text-align: center;}
+.vid-info a { display: block; margin-top: 0%; line-height: 1.2; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5);  border-bottom: none; margin:  auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+
+
+.nav div.main_list {
+  height: 100;
+  float: right;
+}
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav div.main_list ul li {
+  width: auto;
+  height: 30px;
+  padding: 0;
+  padding-right: 3rem;
+}
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color:  #03989E;
+  line-height: 15px;
+  font-size: 1.4rem;
+}
+.nav div.main_list ul li a:hover {
+  color: white;
+}
+
+.content h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.content p {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.footer-basic {
+  padding:10px 10;
+  background-color:#03989e;
+  color: white;
+}
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+.footer-basic li {
+  padding:0 10px;
+}
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+.footer-basic ul a:hover {
+  opacity:1;
+}
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:white;
+  margin-bottom:0;
+}
+
+
+  

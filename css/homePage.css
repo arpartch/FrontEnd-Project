@@ -73,8 +73,17 @@ h1 {
     color: white;
 }
 
+.movie-sliders h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 60px;
+    font-style: oblique;
+}
+
  .carousel {
     padding-right: 2%;
+    
     position: center;
     padding-bottom: 5%;
     margin: 2%;
@@ -91,7 +100,8 @@ h1 {
     top: 0;
     z-index: 3;
     position: absolute;
-    left: 50px;
+    left: 30px;
+    
       }
   .carousel .switchRight {
     color: white;
@@ -106,6 +116,7 @@ h1 {
     z-index: 3;
     position: absolute;
     right: -50px;
+    margin-right: 60px;
   }
   .carouselbox {
     height: 250px;
@@ -383,6 +394,10 @@ img:hover {       /* adds animation to img when hovered over */
     border: 2px solid rgb(5, 5, 5);
    
     color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size: cover;
     
 }
 .content h4 {
@@ -669,7 +684,10 @@ img:hover {       /* adds animation to img when hovered over */
  .myH2 {
      text-align:center;
      font-size: 4rem;
-     margin-top: 200px;
+     margin-top: 250px;
+     font-size: 70px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
  }
  .myP {
      text-align: justify;
