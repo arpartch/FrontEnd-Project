@@ -18,8 +18,10 @@ showMoviesData1();
 showMoviesData2();
 showMoviesData3();
 showMoviesData4();
+
 // Scroll Functionality
 var scrollAmount = 0;
+//sliders
 function sliderScrollLeft() {
   sliders.scrollTo({
     top: 0,
@@ -42,7 +44,97 @@ function sliderScrollRight() {
   console.log("Scroll Amount: ", scrollAmount);
 }
 
+//slider1
+function slider1ScrollLeft() {
+  sliders1.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollPerClick),
+    behavior: "smooth",
+  });
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+function slider1ScrollRight() {
+  if (scrollAmount <= sliders1.scrollWidth - sliders1.clientWidth) {
+    sliders1.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollPerClick),
+      behavior: "smooth",
+    });
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
 
+//slider2
+function slider2ScrollLeft() {
+  sliders2.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollPerClick),
+    behavior: "smooth",
+  });
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+function slider2ScrollRight() {
+  if (scrollAmount <= sliders2.scrollWidth - sliders2.clientWidth) {
+    sliders2.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollPerClick),
+      behavior: "smooth",
+    });
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+
+//slider3
+function slider3ScrollLeft() {
+  sliders1.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollPerClick),
+    behavior: "smooth",
+  });
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+function slider3ScrollRight() {
+  if (scrollAmount <= sliders3.scrollWidth - sliders3.clientWidth) {
+    sliders3.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollPerClick),
+      behavior: "smooth",
+    });
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+
+//slider 4
+function slider4ScrollLeft() {
+  sliders4.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollPerClick),
+    behavior: "smooth",
+  });
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
+function slider4ScrollRight() {
+  if (scrollAmount <= sliders4.scrollWidth - sliders4.clientWidth) {
+    sliders4.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollPerClick),
+      behavior: "smooth",
+    });
+  }
+  console.log("Scroll Amount: ", scrollAmount);
+}
 
 // For showing dynamic contents only
 // Popular
@@ -217,7 +309,7 @@ function clearInfoBox(){
 document.addEventListener('click', (event)=> { //added click event 
   const target = event.target; //setting a variable equal to the events target  *the element that has the eventlistener attached to it
 
-  if(target.tagName.toLowerCase() === 'img') { //this check all the elements that has a click event listenr and will only run code it it happened on an img tag
+  if(target.tagName.toLowerCase() === 'img' && target.hasAttribute('id')) { //this check all the elements that has a click event listenr and will only run code it it happened on an img tag
       console.log(event)
       
       let movieId = target.dataset.movieId; //created variable to hold the Movie Id
