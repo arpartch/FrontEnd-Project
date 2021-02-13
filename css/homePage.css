@@ -684,7 +684,10 @@ img:hover {       /* adds animation to img when hovered over */
  .myH2 {
      text-align:center;
      font-size: 4rem;
-     margin-top: 200px;
+     margin-top: 250px;
+     font-size: 70px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
  }
  .myP {
      text-align: justify;
